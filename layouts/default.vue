@@ -18,12 +18,12 @@
                 // CompanyLists.setSearchCompany(SearchText.value)
                 isLoading.value = false
             }
-        },1000)
+        },2000)
     }
 
     onMounted(()=>{
         LoadingData()
-        SearchText.value = JSON.parse(sessionStorage.getItem("searchText") as string)
+        SearchText.value = JSON.parse(sessionStorage.getItem("searchText") as string)||''
         CompanyLists.setSearchCompany(SearchText.value)
     })
 
